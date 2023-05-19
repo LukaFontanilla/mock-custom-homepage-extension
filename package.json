@@ -1,0 +1,78 @@
+{
+  "name": "luka-extension-test",
+  "version": "0.0.1",
+  "description": "Bootstrapped Looker Extension with React and Typescript",
+  "main": "dist/bundle.js",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "analyze": "export ANALYZE_MODE=static && yarn build",
+    "build": "export BABEL_ENV=build && webpack --config webpack.prod.js",
+    "clean": "rm -rf dist",
+    "develop": "webpack serve --hot --port 8080 --disable-host-check --config webpack.develop.js",
+    "prebuild": "yarn clean"
+  },
+  "dependencies": {
+    "@looker/components": "^1.4.1",
+    "@looker/embed-sdk": "^1.5.1",
+    "@looker/extension-sdk": "^21.6.0",
+    "@looker/extension-sdk-react": "^21.6.0",
+    "@looker/sdk": "^21.6.0",
+    "@looker/sdk-rtl": "^21.0.13",
+    "css-loader": "^5.2.6",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-is": "^17.0.2",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^4.0.3",
+    "react-transition-group": "^4.4.2",
+    "style-loader": "^2.0.0",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.14.4",
+    "@babel/plugin-transform-react-jsx": "^7.14.3",
+    "@babel/plugin-transform-runtime": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "@babel/preset-react": "^7.12.10",
+    "@babel/preset-typescript": "^7.12.7",
+    "@babel/runtime": "^7.12.5",
+    "@types/react": "^17.0.8",
+    "@types/react-dom": "^17.0.5",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/readable-stream": "^2.3.10",
+    "@types/styled-components": "5.1.9",
+    "babel-loader": "^8.2.2",
+    "babel-preset-nano-react-app": "^0.1.0",
+    "minimist": "^1.2.2",
+    "npm-run-all": "^4.1.5",
+    "react-hot-loader": "^4.12.20",
+    "typescript": "4.3.2",
+    "webpack": "^5.38.1",
+    "webpack-bundle-analyzer": "^4.4.2",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "babel": {
+    "presets": [
+      "nano-react-app"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-class-properties",
+        {
+          "loose": true
+        }
+      ],
+      [
+        "@babel/plugin-transform-react-jsx",
+        {
+          "pragmaFrag": "React.Fragment"
+        }
+      ]
+    ]
+  }
+}

@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    transition: background-color 2s ease;
+    background-color: black
+  }
+  
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    transition: background-color 2s ease;
+    background-color: #272727;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: hidden;
+  }
+  
+  #root {
+    overflow: auto;
+  }
+
+  body {
+    position: fixed;
+    overflow: hidden;
+    overscroll-behavior-y: none;
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial,
+      sans-serif;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .content {
+    padding-top: 10px;
+    transform: translate3d(200%, 0, 0);
+    text-align: right;
+  }
+  
+  .content::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 190px;
+    transform: translate3d(-120px, 0, 0);
+    height: 1px;
+    background: white;
+  }
+
+  .switch {
+    width: 160px;
+    height: 100px;
+    background-color: black;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 50px;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .switch[data-ison="true"] {
+    justify-content: flex-end;
+  }
+
+  /* .handle {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 40px;
+  } */
+
+
+  
